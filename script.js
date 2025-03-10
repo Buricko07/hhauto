@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 
-(async () => {
+const getFirstElement = async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto('https://olx.ba/shops/HHAUTO/aktivni');
@@ -23,4 +23,6 @@ import puppeteer from 'puppeteer';
   console.log(car);
 
   await browser.close();
-})();
+};
+
+getFirstElement();
